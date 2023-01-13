@@ -55,5 +55,5 @@ const pokemonSchema = new Schema<pokemon>({
   },
 });
 
-const   pokemonModel = model('pokemon-collection', pokemonSchema);
+const pokemonModel = model('pokemon-collection', pokemonSchema);
 export default pokemonModel;

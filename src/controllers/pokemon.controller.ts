@@ -3,7 +3,7 @@ import {
   listarPokemonServ,
   insertPokemon,
   obtenerPokemon,
-  eliminarPokemon
+  eliminarPokemon,
 } from '../services/pokemon.service';
 
 const listarPokCtrl = async ({ body }: Request, res: Response) => {
@@ -11,10 +11,9 @@ const listarPokCtrl = async ({ body }: Request, res: Response) => {
   res.send(responseUser);
 };
 
- 
-const obtenerPokCtrl = async ({ params  }: Request, res: Response) => {
-const {id} = params;
-const responseUser = await obtenerPokemon(id);
+const obtenerPokCtrl = async ({ params }: Request, res: Response) => {
+  const { id } = params;
+  const responseUser = await obtenerPokemon(id);
   res.send(responseUser);
 };
 
@@ -23,10 +22,10 @@ const insertarPokCtrl = async ({ body }: Request, res: Response) => {
   res.send(responsePokemon);
 };
 
-const eliminarPokCtrl = async ({ params  }: Request, res: Response) => {
-  const {id} = params;
-  const responsePokemon  = await eliminarPokemon(id);
+const eliminarPokCtrl = async ({ params }: Request, res: Response) => {
+  const { id } = params;
+  const responsePokemon = await eliminarPokemon(id);
   return responsePokemon;
-}
+};
 
 export { eliminarPokCtrl, insertarPokCtrl, obtenerPokCtrl, listarPokCtrl };
