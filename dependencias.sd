@@ -1,0 +1,34 @@
+--save-dev --- dependencia de desarrollo
+--save-exact --> ultima version 
+
+
+dotenv --> utiizar variables de entorno dentro de la app 
+ts-node --> cuando se modifiquer un ts, se recarge el server -- npm i -D ts-node
+
+nodemon --> ejecutar el codigo en sevidor sin la necesidad de traspilar el codigo -- npm i -D nodemon -- https://www.npmjs.com/package/nodemon
+{
+    "watch":["src"],  --> carpeta donde vera los cambios nodemon
+    "ext":["ts,json"], --> extencion de los archivos aceptados para los cambios
+    "ignore": ["src/**/*.spec.ts"], --> igmora los cambios en los archivos dados
+    "exec": "npx ts-node --requiere dotenv/config ./src/server.ts" --> comando de ejecucucion
+} 
+ 
+
+ prettier --> formateador de codigo   -- npm i --save-dev --save-exact prettier -- https://prettier.io
+..prettierrc
+        {
+                "parser":"typescript", --> tipo de codigo a formatear
+                "singleQuote":true,--> single comilla
+                "trailingComma":"all", --> como al final de cada variable
+                "tabWidth":2 --> tamno tabulador 2
+
+        }
+
+eslint
+
+
+
+npm i --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin  eslint-config-prettier eslint-config-standard eslint-plugin-prettier  eslint-plugin-import eslint-plugin-node eslint-plugin-promise
+
+
+npm i mongoose --> mongo BD

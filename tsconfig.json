@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",              /*esédsifica la version de ecmascript */ 
+    "module": "CommonJS",         /* espesifica la version a transpilar*/
+    "declaration": true,          /*genera los archivos '.D.TS' */
+    "outDir": "./dist",           /* directorio donde se transpila el codigo a JS*/
+    "rootDir": "./src",           /* directorio desde donde se transpila el codigo*/
+    "strict": true,               /* habilita el tipado Stricto*/
+    "esModuleInterop": true,      /* habilita la interoperabilidad entre comonJS y otras versiones */
+    "experimentalDecorators": true,/*habilita los decoradores de es7 */
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
